@@ -14,7 +14,7 @@ Plugin short description
 
 == Description ==
 
-This plugin has been developed by http://www.yudiz.comHardik Patel ( also. Lakkad) It will help to filter/sort/export(CSV) users. You can filter with multiple parameters. e.g. Date, Role, Meta key-value, Registration Dates. 
+This plugin has been developed by https://www.linkedin.com/in/hardik-lakkad-097b12147/ Hardik Patel ( also. Lakkad ) It will help to filter/sort/export(CSV) users. You can filter with multiple parameters. e.g. Date, Role, Meta key-value, Registration Dates. 
 
 ========================================================
 How to use this plugin?
