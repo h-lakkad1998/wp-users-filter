@@ -14,21 +14,22 @@ Plugin short description
 
 == Description ==
 
-This plugin has been developed by <a href="http://www.yudiz.com" target="_blank">Yudiz Solutions Pvt. Ltd.</a> It will help to filter/sort/export(CSV) users. You can filter with multiple parameters. e.g. Date, Role, Meta key-value, Registration Dates. 
+This plugin has been developed by http://www.yudiz.comHardik Patel ( also. Lakkad) It will help to filter/sort/export(CSV) users. You can filter with multiple parameters. e.g. Date, Role, Meta key-value, Registration Dates. 
 
-<strong>How to use this plugin?</strong>
+========================================================
+How to use this plugin?
 
 1) Go to the users' panel, where you can find the "Filter Users" button. Click on it the pop-up will open. Now you can filter the users based on your requirements.
 
 2) The first tab is the general where you can Filter, Sort, Exclude roles, Exclude-id(s), Registered date
 
 3) The second tab is Advanced, where you can filter based on multiple registration dates and meta-key-value. You convert the entire form method "GET" or "POST" by double-clicking the "Advanced Filter" main title. The default method is GET
-<mark> Note: You may need developer contact based on your requirements. </mark>
-<mark> Only admin users can use this plugin. </mark>
+- Note: You may need developer contact based on your requirements.
+- Only admin users can use this plugin.
 
 4) The third tab is Export CSV. You can export filtered users into a CSV file. It will work even if you want to download all(Without filters) the users.
 
-
+============================================================
 == Installation ==
 
 Installing the plugin is easy. Just follow these steps:
