@@ -251,8 +251,8 @@
         <!-- tab content of export setting ends -->
         <div class="pop-up-footer" >
             <div style="display: inline-block;">
-                <p> Made with <span class="heart"></span> By <a target="_blank" style="color: #5dacec;" href="https://www.yudiz.com/">Yudiz</a>   </p>
-                <p> Need more plugins customiation? <a href="https://www.yudiz.com/get-in-touch/" target="_blank" style="color: #5dacec;" >Contact our team</a>  &#128104;&#8205;&#128187;</p>
+                <p> Made with <span class="heart"></span> By <a target="_blank" style="color: #5dacec;" href="https://www.yudiz.com/">Hardik Patel/Hardik Lakkad</a>   </p>
+                <p> Need more plugins customiation? <a href="https://in.linkedin.com/in/hardik-lakkad-097b12147" target="_blank" style="color: #5dacec;" >Contact me</a>  &#128104;&#8205;&#128187;</p>
             </div>
             <div class="txt-right yspl-sbmit-actions" >
                 <a href="<?php global $pagenow; echo $pagenow; ?>" class="button button-primary" ><?php _e("Clear Filters","wp-users-filter"); ?></a>
