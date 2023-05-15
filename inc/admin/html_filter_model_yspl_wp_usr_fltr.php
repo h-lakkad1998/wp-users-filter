@@ -13,16 +13,18 @@
             //echo "m_key : " . $m_key . "m_val : " . $m_val . "m_op  :" . $m_op ;
             if(  empty( trim(  $m_key ) )  ||  empty( trim(  $m_op ) ) ) return ob_get_clean();
             $compatible_compares = array( '=', "!=" , 'IN', 'BETWEEN', 'LIKE', 'REGEXP', 'RLIKE', '>', '>=', '<', '<=', 'NOT EXISTS', 'NOT REGEXP' );  ?>
-            <div class="pad-top-10 meta_wrapper" > 
+            <td> 
                 <input type="text" name="mta-ky[]" value="<?php echo $m_key; ?>" placeholder="Add meta key like: monthly_salary" >
-                <label> <?php _e("Select operator","wp-users-filter"); ?> : </label>
+            </td>
+            <td>
                 <select name="mta-op[]" >
                     <?php  
                         foreach( $compatible_compares as $single_op )
                             echo "<option value='$single_op'". ( $single_op === $m_op  ?  " selected " : "" )  . " >$single_op</option>";
                     ?>
                 </select>
-                <label> <?php _e("Type","wp-users-filter"); ?> : </label>
+            </td>
+            <td>
                 <select name="mta-tp[]" >
                     <?php  
                         $compatible_type = array( "CHAR","NUMERIC", "BINARY", "DATE", "DATETIME", "DECIMAL", "SIGNED", "UNSIGNED", "TIME" );
@@ -30,9 +32,11 @@
                             echo "<option value='$single_tp'". ( $single_tp ==  $m_type  ?  " selected " : "" )  . " >$single_tp</option>";
                     ?>
                 </select>
+            </td>
+            <td>
                 <input type="text" name="mta-vl[]" value="<?php echo  empty (trim(  $m_val )) ? "empty" : $m_val; ?>" >
                 <button type="button" class="button remov_meta" > X </button>
-            </div>
+            </td>
     <?php return ob_get_clean(); }
 ?>
 <div class="alignleft actions">
@@ -215,21 +219,21 @@
                             </tr>
                         </template>
                         <div  class="pad-top-10 ">
-                        <table class="yspl_table_append meta_filter_table yspl_wp_user_fltr_meta_append_content"  >
-                            <tbody id="advnce_append_content" >
-                                <tr>
-                                    <th>Meta key</th>
-                                    <th>Operator</th>
-                                    <th>Type</th>
-                                    <th>Value</th>
-                                </tr>
-                            </tbody>
-                        </table>
-                            <?php if( $meta_keys ) {
-                                //echo "<pre>";print_r( $meta_keys );echo "</pre>";
-                                foreach($meta_keys as $index => $single_val )
-                                    echo meta_multiple_vals( $meta_keys[$index], $meta_vals[$index], $meta_ops[$index], $meta_tp[$index] ); 
-                            } ?>
+                            <table class="yspl_table_append meta_filter_table yspl_wp_user_fltr_meta_append_content"  >
+                                <tbody id="advnce_append_content" >
+                                    <tr>
+                                        <th>Meta key</th>
+                                        <th>Operator</th>
+                                        <th>Type</th>
+                                        <th>Value</th>
+                                    </tr>
+                                    <?php if( $meta_keys ) {
+                                        //echo "<pre>";print_r( $meta_keys );echo "</pre>";
+                                        foreach($meta_keys as $index => $single_val )
+                                            echo meta_multiple_vals( $meta_keys[$index], $meta_vals[$index], $meta_ops[$index], $meta_tp[$index] ); 
+                                    } ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
