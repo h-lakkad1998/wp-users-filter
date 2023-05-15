@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: WP Users Filter
- * Plugin URL: https://wordpress.org/plugin-url/
+ * Plugin URL: 
  * Description: This plugin helps the admin to filter the users with various ranges of filters.
  * Version: 1.0
- * Author: Yudiz Solution PVT. LTD.
- * Author URI: https://www.plugin-author-url.com
+ * Author: Hardik Lakkad/Hardik Patel
+ * Author URI: https://in.linkedin.com/in/hardik-lakkad-097b12147
  * Developer: Hardik Patel
- * Developer E-Mail: wordpress@yudiz.in
+ * Developer E-Mail: hardiklakkad2@gmail.com
  * Text Domain: wp-users-filter
  * Domain Path: /languages
  *
