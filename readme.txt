@@ -13,31 +13,41 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Plugin short description
 
 == Description ==
+Plugin for filtering, sorting, and exporting users
 
-This plugin has been developed by https://www.linkedin.com/in/hardik-lakkad-097b12147/ Hardik Patel ( also. Lakkad ) It will help to filter/sort/export(CSV) users. You can filter with multiple parameters. e.g. Date, Role, Meta key-value, Registration Dates. 
+This is developed by https://www.linkedin.com/in/hardik-lakkad-097b12147/ Hardik Patel ( also. Lakkad ). It allows you to filter, sort, and export users in CSV format. You can filter users by multiple parameters, such as date, role, meta key-value, and registration date. 
 
 ========================================================
 How to use this plugin?
 
-1) Go to the users' panel, where you can find the "Filter Users" button. Click on it the pop-up will open. Now you can filter the users based on your requirements.
+1) Go to the Users page.
 
-2) The first tab is the general where you can Filter, Sort, Exclude roles, Exclude-id(s), Registered date
+2) Click the Filter Users button.
 
-3) The second tab is Advanced, where you can filter based on multiple registration dates and meta-key-value. You convert the entire form method "GET" or "POST" by double-clicking the "Advanced Filter" main title. The default method is GET
-- Note: You may need developer contact based on your requirements.
-- Only admin users can use this plugin.
+3) The Filter Users pop-up will open.
 
-4) The third tab is Export CSV. You can export filtered users into a CSV file. It will work even if you want to download all(Without filters) the users.
+4) Select the filters you want to use and click apply.
+
+The filtered users will be displayed.
+
+To export the filtered users to a CSV file, click the Export CSV button from the export tab.
 
 ============================================================
 == Installation ==
 
-Installing the plugin is easy. Just follow these steps:
+To install the plugin, follow these steps:
 
-1. Install the plugin.
-2. Go to the Users/All users page.
-3. You will find the filter users button, click on it, and the filter pop-up will open.
-4. Now, you can filter the users based on your requirements.
+1) Go to the Plugins page.
+2) Click the Add New button.
+3) Search for the plugin name.
+4) Click the Install Now button.
+5) Click the Activate button.
+
+The plugin is now installed.
+
+Notes:
+-> Only administrators can use the plugin.
+-> If you need help using the plugin, you can contact the developer.
 
 == Frequently Asked Questions ==
 
