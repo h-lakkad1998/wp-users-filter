@@ -1,12 +1,15 @@
 <?php 
     include( YSPL_WP_USR_FLTR_DIR . '/inc/admin/query_get_paras.'. YSPL_WP_USR_FLTR_PREFIX .'.php' );
     function yspl_wp_usr_filter( $frm_date, $to_date ){ ob_start(); if( empty(  trim(  $frm_date  ) ) ||  empty(  trim(   $to_date ) ) ) return ob_get_clean(); ?>
-        <div class="pad-top-10 date_wrapper" > 
-            <input type="date" name="mlt-f-dt[]" <?php echo ( $frm_date ) ? " value='$frm_date'" : ""; ?>  >
-            <span><?php _e("to","wp-users-filter"); ?></span>
-            <input type="date" name="mlt-t-dt[]" <?php echo ( $to_date ) ? " value='$to_date'" : ""; ?>  >
-            <button type="button" class="button remov_date" > X </button>
-        </div>
+            <tr>
+                <td>
+                    <input type="date" name="mlt-f-dt[]" <?php echo ( $frm_date ) ? " value='$frm_date'" : ""; ?>  >
+                </td>
+                <td>
+                    <input type="date" name="mlt-t-dt[]" <?php echo ( $to_date ) ? " value='$to_date'" : ""; ?>  >
+                    <button type="button" class="button remov_date" > X </button>
+                </td>
+            </tr>
     <?php return ob_get_clean(); }
     function meta_multiple_vals( $m_key, $m_val, $m_op, $m_type ){ 
             ob_start();
@@ -63,6 +66,7 @@
             <button type="button" class="tablinks" data-id="yspl_wp_usr_fltr-date-filter-settings"><?php _e("Date Filters","wp-users-filter"); ?></button>
             <button type="button" class="tablinks" data-id="yspl_wp_usr_fltr-advanced-settings"><?php _e("Advanced","wp-users-filter"); ?></button>
             <button type="button" class="tablinks" data-id="yspl_wp_usr_fltr-export-settings"><?php _e("Export","wp-users-filter"); ?></button>
+            <a href="<?php global $pagenow; echo $pagenow; ?>" class="button button-primary clear_filters" ><?php _e("Clear Filters","wp-users-filter"); ?></a>
         </div>
         <!-- tab content of genral setting -->
         <div id="yspl_wp_usr_fltr-general-settings" class="yspl_wp_usr_fltr-tabcontent yspl_us_general" style="display:block;" >
@@ -149,27 +153,28 @@
                 </div>
                 <button class="click_to_append button button-primary add_multi_date" type="button" id="yspl_wp_usr_fltr_add_multi_date" ><?php _e("Add date","wp-users-filter"); ?></button>
                 <table  class="meta_filter_table yspl_wp_user_fltr_meta_append_content"  >
-                    <tbody >
+                    <tbody id="dt_append_content">
                         <tr>
                             <th>From Date</th>
                             <th>To Date</th>
                         </tr>
+                        <?php if( ! empty( $multi_from_date ) && ! empty( $multi_to_date )   ){
+                            foreach( $multi_from_date as $index => $single_val )
+                                echo yspl_wp_usr_filter( $multi_from_date[$index], $multi_to_date[$index] );
+                        } ?>
                     </tbody>
                 </table>
                 <template id="yspl_wp_user_fltr_dt_copy_content" >
-                    <div class="pad-top-10 date_wrapper" > 
-                        <input type="date" name="mlt-f-dt[]"  >
-                            <span><?php _e("to","wp-users-filter") ?></span>
+                    <tr>
+                        <td> 
+                            <input type="date" name="mlt-f-dt[]"  >
+                        </td>
+                        <td>
                             <input type="date" name="mlt-t-dt[]" >
-                        <button type="button" class="button remov_date" > X </button>
-                    </div>
+                            <button type="button" class="button remov_date" > X </button>
+                        </td>
+                    </tr>
                 </template>
-                <div id="yspl_wp_user_fltr_dt_append_content" class="pad-top-10">
-                    <?php if( ! empty( $multi_from_date ) && ! empty( $multi_to_date )   ){
-                        foreach( $multi_from_date as $index => $single_val )
-                            echo yspl_wp_usr_filter( $multi_from_date[$index], $multi_to_date[$index] );
-                    } ?>
-                </div>
             </div>
         </div>
         <!-- tab content of date setting ends -->
@@ -259,7 +264,6 @@
                 <p> Need more plugins customiation? <a href="https://in.linkedin.com/in/hardik-lakkad-097b12147" target="_blank" style="color: #5dacec;" >Contact me</a>  &#128104;&#8205;&#128187;</p>
             </div>
             <div class="txt-right yspl-sbmit-actions" >
-                <a href="<?php global $pagenow; echo $pagenow; ?>" class="button button-primary" ><?php _e("Clear Filters","wp-users-filter"); ?></a>
                 <button class="button button-primary" type="submit"     name="fltr-sbmt" value="1"><?php _e("Filter Users","wp-users-filter"); ?></button>
             </div>
             <div id="pop-pop"></div>
