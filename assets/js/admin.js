@@ -24,11 +24,11 @@ jQuery('body').on("click",".tablinks", function (e) {
 	var splited_ary = crnt_tab_attr.split('_fltr-');
 	localStorage.setItem("yspl_usr_fltr_current_tab", splited_ary[1]);
 });
-jQuery('body').on('click',".remov_date", function () { jQuery(this).parents('.date_wrapper').remove(); });
+jQuery('body').on('click',".remov_date", function () { jQuery(this).parents('tr').remove(); });
 jQuery('body').on('click',".remov_meta", function () { jQuery(this).parents('tr').remove(); });
 jQuery('body').on('click','#yspl_wp_usr_fltr_add_multi_date', function () {
  	const DATE_COPY_CONTENT = jQuery("#yspl_wp_user_fltr_dt_copy_content").html().trim();
- 	jQuery("#yspl_wp_user_fltr_dt_append_content").append( DATE_COPY_CONTENT );
+ 	jQuery("#dt_append_content").append( DATE_COPY_CONTENT );
 });
 jQuery('body').on('click','#yspl_wp_usr_fltr_add_meta_query', function () {
 	const META_COPY_CONTENT = jQuery("#yspl_wp_user_fltr_meta_copy_content").html().trim();
