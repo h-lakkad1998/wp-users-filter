@@ -26,11 +26,11 @@ jQuery('body').on("click",".tablinks", function (e) {
 });
 jQuery('body').on('click',".remov_date", function () { jQuery(this).parents('.date_wrapper').remove(); });
 jQuery('body').on('click',".remov_meta", function () { jQuery(this).parents('tr').remove(); });
-// jQuery('body').on('click','#yspl_wp_usr_fltr_add_multi_date', function () {
-// 	const DATE_COPY_CONTENT = jQuery("#yspl_wp_user_fltr_dt_copy_content").html().trim();
-// 	jQuery("#yspl_wp_user_fltr_dt_append_content").append( DATE_COPY_CONTENT );
-// });
-jQuery('body').on('click','.click_to_append', function () {
+jQuery('body').on('click','#yspl_wp_usr_fltr_add_multi_date', function () {
+ 	const DATE_COPY_CONTENT = jQuery("#yspl_wp_user_fltr_dt_copy_content").html().trim();
+ 	jQuery("#yspl_wp_user_fltr_dt_append_content").append( DATE_COPY_CONTENT );
+});
+jQuery('body').on('click','#yspl_wp_usr_fltr_add_meta_query', function () {
 	const META_COPY_CONTENT = jQuery("#yspl_wp_user_fltr_meta_copy_content").html().trim();
 	jQuery("#advnce_append_content").append( META_COPY_CONTENT );
 });
